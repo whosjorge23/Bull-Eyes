@@ -29,6 +29,7 @@ struct ContentView: View {
                         .font(.title2)
                     Group{
                         Slider(value: $value, in: 0...100)
+                            .accentColor(.orange)
                         HStack(alignment: .center, spacing: 0, content: {
                             Text("0")
                             Spacer()
@@ -89,6 +90,7 @@ struct ContentView: View {
                     
                     Spacer()
                 }
+                .background(Image("bg_bull_eye").scaledToFill())
                 EmitterView()
                     .scaleEffect(winGame ? 1 : 0, anchor: .top)
                     .opacity(winGame ? 1 : 0)
